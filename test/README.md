@@ -3,7 +3,7 @@ graduation project
 
 ## test scrips: ##
 ### arduino test ###
-- python
+- python 
 - c/c++
 
 ### rasberry pi test ###
