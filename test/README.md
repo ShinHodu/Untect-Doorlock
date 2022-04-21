@@ -3,8 +3,8 @@ graduation project
 
 ## test scrips: ##
 ### arduino test ###
-- python (https://github.com/ShinHodu/Untect-Doorlock/blob/main/test/arduino.cpp)
-- c/c++
+- arduino.cpp
+- arduino.py
 
 ### rasberry pi test ###
 1. Mediapipe Installation
