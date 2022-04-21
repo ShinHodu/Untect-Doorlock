@@ -7,7 +7,7 @@ graduation project
 - arduino.py
 
 ### rasberry pi test ###
-####1. Mediapipe Installation
+#### 1. Mediapipe Installation
 
  [Mediapipe] (https://google.github.io/mediapipe/getting_started/install#installing-on-debian-and-ubuntu)
 
@@ -22,7 +22,7 @@ graduation project
  ```
 
 
-2. OpenCV, FFmpeg Installation
+#### 2. OpenCV, FFmpeg Installation
 
  ```
  $ cd ~/mediapipe
@@ -31,7 +31,7 @@ graduation project
  ```
 
 
-3. bazel Installation
+#### 3. bazel Installation
 
  [bazel git] (https://github.com/PINTO0309/Bazel_bin)
 
@@ -55,14 +55,14 @@ graduation project
  $ /usr/local/bin/bazel
  ```
  
-4. EGL driver Installation to run Mediapipe on GPU
+#### 4. EGL driver Installation to run Mediapipe on GPU
 
   ```
   $ sudo apt-get install mesa-common-dev libegl1-mesa-dev libgles2-mesa-dev -y
   ```
 
 
- 5. run Mediapipe
+#### 5. run Mediapipe
 
   - mediapipe/examples/desktop/hello_world/BUILD 에 cc_binary를 추가
 
