@@ -7,7 +7,7 @@ graduation project
 - arduino.py
 
 ### rasberry pi test ###
-1. Mediapipe Installation
+1. Mediapipe Installation\\
 [Mediapipe] (https://google.github.io/mediapipe/getting_started/install#installing-on-debian-and-ubuntu)
 ```
 $ sudo apt-get update
