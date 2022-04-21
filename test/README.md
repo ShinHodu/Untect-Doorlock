@@ -3,7 +3,7 @@ graduation project
 
 ## test scrips: ##
 ### arduino test ###
-- python 
+- python (https://github.com/ShinHodu/Untect-Doorlock/blob/main/test/arduino.cpp)
 - c/c++
 
 ### rasberry pi test ###
