@@ -3,4 +3,4 @@ graduation project
 
 ## test scrips: ##
 - arduino test
-- razpi test
+- rasberry pi test
