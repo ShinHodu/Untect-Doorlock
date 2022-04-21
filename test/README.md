@@ -2,5 +2,5 @@
 graduation project
 
 ## test scrips: ##
-- arduino_test
-- pi_test
+- arduino test
+- razpi test
