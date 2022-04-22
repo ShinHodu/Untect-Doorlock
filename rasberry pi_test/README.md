@@ -1,8 +1,7 @@
 
 
 # test scrips
-
-
+https://ahnsun98.tistory.com/6
 
 ### rasberry pi test 1: Installation
 #### 1. Mediapipe Installation
