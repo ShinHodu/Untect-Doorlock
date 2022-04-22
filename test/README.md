@@ -6,7 +6,9 @@ graduation project
 - arduino.cpp
 - arduino.py
 
-### rasberry pi test ###
+* * *
+
+### rasberry pi test 1: Installation
 #### 1. Mediapipe Installation
 
  [Mediapipe] (https://google.github.io/mediapipe/getting_started/install#installing-on-debian-and-ubuntu)
@@ -82,3 +84,18 @@ graduation project
   ```
 
   - bazel을 구축한 후(수십 분이 소요 됩니다) 'Hello World!'가 10번 표시되면 정상
+
+### rasberry pi test 2: Hand Tracking
+#### 1. add _cc_binary_
+ - path: mediapipe/examples/desktop/multi_hand_tracking/BUILD
+ ```
+ linkopts = [
+    "-latomic",
+    "-lopencv_core",
+    "-lopencv_highgui",
+    "-lopencv_imgproc",
+    "-lopencv_videoio"
+],
+ ```
+
+
