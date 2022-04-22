@@ -1,12 +1,8 @@
-# Untect-Doorlock
-graduation project
 
-## test scrips: ##
-### arduino test ###
-- arduino.cpp
-- arduino.py
 
-* * *
+# test scrips
+
+
 
 ### rasberry pi test 1: Installation
 #### 1. Mediapipe Installation
