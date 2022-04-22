@@ -85,17 +85,52 @@ graduation project
 
   - bazel을 구축한 후(수십 분이 소요 됩니다) 'Hello World!'가 10번 표시되면 정상
 
-### rasberry pi test 2: Hand Tracking
+### rasberry pi test 2: Multi Hand Tracking
 #### 1. add _cc_binary_
- - path: mediapipe/examples/desktop/multi_hand_tracking/BUILD
+  - path: mediapipe/examples/desktop/multi_hand_tracking/BUILD
+  ```
+  linkopts = [
+     "-latomic",
+     "-lopencv_core",
+     "-lopencv_highgui",
+     "-lopencv_imgproc",
+     "-lopencv_videoio"
+ ],
+  ```
+
+#### 2. link camera
+  - add this option if no camera
+  ```
+  bazel-bin/mediapipe/examples/desktop/multi_hand_tracking/multi_hand_tracking_gpu \
+   --calculator_graph_config_file=mediapipe/graphs/hand_tracking/multi_hand_tracking_desktop_live.pbtxt \
+   --input_video_path="video.mp4" \
+   --output_video_path="video_gpu.mp4"
+  ```
+  
+ #### try- build Mediapipe
+  - Multi Hand Tracking on CPU
+  ```
+  $ cd ~/mediapipe
+
+  $ bazel build -c opt --define MEDIAPIPE_DISABLE_GPU=1 \ mediapipe/examples/desktop/multi_hand_tracking:multi_hand_tracking_gpu
+
+  $ export GLOG_logtostderr=1
+  $ bazel-bin/mediapipe/examples/desktop/multi_hand_tracking/multi_hand_tracking_gpu \ --calculator_graph_config_file=mediapipe/graphs/hand_tracking/multi_hand_tracking_desktop_live.pbtxt
+  ```
+  
+ - Multi Hand Tracking on GPU
  ```
- linkopts = [
-    "-latomic",
-    "-lopencv_core",
-    "-lopencv_highgui",
-    "-lopencv_imgproc",
-    "-lopencv_videoio"
-],
+ $ cd ~/mediapipe
+
+ $ bazel build -c opt --copt -DMESA_EGL_NO_X11_HEADERS --copt -DEGL_NO_X11 \ mediapipe/examples/desktop/multi_hand_tracking:multi_hand_tracking_gpu
+
+ $ export GLOG_logtostderr=1
+ $ bazel-bin/mediapipe/examples/desktop/multi_hand_tracking/multi_hand_tracking_gpu \ --calculator_graph_config_file=mediapipe/graphs/hand_tracking/multi_hand_tracking_desktop_live.pbtxt
  ```
 
-
+#### 3. adjust files in path: mediapipe/examples/desktop
+- demo_run_graph_main_gpu.cc
+- end_loop_calculator.h
+- landmarks_to_render_data_calculator.cc
+ 
+ 
